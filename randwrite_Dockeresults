@@ -1,0 +1,17 @@
+test: (g=0): rw=randwrite, bs=(R) 4096B-4096B, (W) 4096B-4096B, (T) 4096B-4096B, ioengine=libaio, iodepth=64
+fio-3.7
+Starting 1 process
+
+test: (groupid=0, jobs=1): err= 0: pid=351: Thu Nov 26 21:38:12 2020
+  write: IOPS=1417, BW=5670KiB/s (5806kB/s)(725MiB/130943msec)
+   bw (  KiB/s): min=    8, max=18136, per=100.00%, avg=9573.37, stdev=4032.96, samples=154
+   iops        : min=    2, max= 4534, avg=2393.16, stdev=1008.29, samples=154
+  cpu          : usr=0.32%, sys=37.64%, ctx=2242, majf=0, minf=26
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=0.1%, >=64=100.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.1%, >=64=0.0%
+     issued rwts: total=0,185598,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=64
+
+Run status group 0 (all jobs):
+  WRITE: bw=5670KiB/s (5806kB/s), 5670KiB/s-5670KiB/s (5806kB/s-5806kB/s), io=725MiB (760MB), run=130943-130943msec
