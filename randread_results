@@ -1,0 +1,21 @@
+test: (g=0): rw=randread, bs=(R) 4096B-4096B, (W) 4096B-4096B, (T) 4096B-4096B, ioengine=libaio, iodepth=64
+fio-3.7
+Starting 1 process
+
+test: (groupid=0, jobs=1): err= 0: pid=6952: Thu Nov 26 18:50:57 2020
+   read: IOPS=283, BW=1135KiB/s (1162kB/s)(133MiB/120475msec)
+   bw (  KiB/s): min=  590, max= 1397, per=100.00%, avg=1133.95, stdev=127.33, samples=240
+   iops        : min=  147, max=  349, avg=283.38, stdev=31.84, samples=240
+  cpu          : usr=2.30%, sys=4.22%, ctx=33641, majf=0, minf=96
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=0.1%, >=64=99.8%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.1%, >=64=0.0%
+     issued rwts: total=34174,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=64
+
+Run status group 0 (all jobs):
+   READ: bw=1135KiB/s (1162kB/s), 1135KiB/s-1135KiB/s (1162kB/s-1162kB/s), io=133MiB (140MB), run=120475-120475msec
+
+Disk stats (read/write):
+    dm-0: ios=34187/183, merge=0/0, ticks=7686984/107630, in_queue=7804663, util=100.00%, aggrios=34181/174, aggrmerge=6/15, aggrticks=7695304/103676, aggrin_queue=7798969, aggrutil=100.00%
+  sda: ios=34181/174, merge=6/15, ticks=7695304/103676, in_queue=7798969, util=100.00%
